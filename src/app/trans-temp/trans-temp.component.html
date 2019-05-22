@@ -28,67 +28,79 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <div class="ibox-tools">
-                                <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
+       
+                    <div class="ibox-content">
+                    <form method="get" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="row">                                  
+                                <div class="col-lg-6">
+                                    <p>
+                                    <button class="btn btn-primary"  type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        Add New Template
+                                    </button>&nbsp;&nbsp;&nbsp;                                         
+                                    </p>  
+                                </div> 
                             </div>
-                        </div>
-                        <div class="ibox-content">
-                            <form method="get" class="form-horizontal">
-                            <div class="form-group">
-                              <div class="col-sm-12">
-                                  <div class="row">                                  
-                                      <div class="col-lg-6">
-                                          <p>
-                                            <button class="btn btn-primary" (click)="addBlockButn();" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                              Add New Template
-                                            </button>&nbsp;&nbsp;&nbsp;                                         
-                                         </p>  
-                                      </div> 
-                                  </div>
-                                  <div class="collapse" id="collapseExample">
-                                      <div class="card card-body">
-                                          <div class="form-group"><label class="col-sm-2 control-label">Template Name</label>
-                                           
-                                                <div class="col-md-2">
-                                                  <input type="text" class="form-control" [(ngModel)]="block_number" name="block_number">
-                                                </div>
-                                           
-                                          </div>
-                                          <div class="form-group"><label class="col-sm-2 control-label">Template Message</label>
-                                            <div id="addNumber1" class="desc col-sm-10">
-                                                <textarea type="number"  rows="6" maxlength="2400" id="message" [(ngModel)]="sms_content" name="sms_content" form="usrform" (input)="charcount($event.target.value)" style="min-width: 50%">
-                                                    </textarea>
-                                                    <p>
-                                                        <span id="remaining">characters remaining:160 </span>
-                                                        <span id="messages">messages:1 </span>
-                                                        <span id="chartotal">total character:0 </span>
-                                                        <span id="maxlimit">&emsp;Max Limit :2400</span>
-                                                    </p>   
-                                                    <div id="valide_content_error"></div>
-                                            </div> 
-                                          </div>
-                                          <div class="form-group"><label class="col-sm-2 control-label"></label>
-                                            <div id="addNumber1" class="desc col-sm-10">
-                                                <button type="button" class="btn btn-primary mb-2" (click)="addNum();">Add</button>
-                                              </div>
-                                            </div>
-                                      </div>
-                                  </div>       
-                              </div>                             
-                            </div>
-                            </form>
-                            <div class="hr-line-dashed"></div> 
-                            
-                            <div id="divider"></div> 
-                                       
-                        </div>                      
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    <div class="form-group"><label class="col-sm-2 control-label">Template Name</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" [(ngModel)]="template_name" name="template_name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Template Message</label>
+                                    <div id="addNumber1" class="desc col-sm-10">
+                                        <textarea type="number"  rows="6" maxlength="2400" id="message" [(ngModel)]="sms_content" name="sms_content" form="usrform" (input)="charcount($event.target.value)" style="min-width: 50%">
+                                            </textarea>
+                                            <p>
+                                                <span id="remaining">characters remaining:160 </span>
+                                                <span id="messages">messages:1 </span>
+                                                <span id="chartotal">total character:0 </span>
+                                                <span id="maxlimit">&emsp;Max Limit :2400</span>
+                                            </p>   
+                                            <div id="valide_content_error"></div>
+                                    </div> 
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label"></label>
+                                    <div id="addNumber1" class="desc col-sm-10">
+                                        <button type="button" class="btn btn-primary mb-2" (click)="addtemplate();">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>       
+                        </div>                             
                     </div>
+                    </form>   
+                    <hr/>
+              
+                    <div class="col-lg-12">
+                            <div style="overflow-x:auto;">
+                          <table *ngIf="load_data" class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions">
+                              <thead>
+                                  <tr>
+                                      <th> Template Name </th>
+                                      <th> Template </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                               <tr *ngFor="let templates of TableDatas" >
+                                     <td>{{ templates.content }}</td>
+                                     <td>{{ templates.variables }}</td>
+                                 </tr>
+                              </tbody>
+                            </table>
+                            </div>
+                      </div>                                                
+                    </div>                      
                 </div>
+              
+                </div>
+              
             </div>
+          
           </div>
+         
       </div>
     </div>
   </div>

@@ -29,23 +29,23 @@
    <li id="activeList1">
        <a class="sideNavLink"><i class="fa fa-address-book-o" aria-hidden="true"></i> <span class="nav-label">PHONE BOOK</span><span class="fa arrow"></span></a>
        <ul class="nav nav-second-level collapse" id ="ActiveIn1">
-          <li> <a  [routerLink]="['/addnewgrp']">Add New Group</a></li>
-          <li> <a [routerLink]="['/grouplist']">Group List</a></li>
+          <li> <a  [routerLink]="['/addnewgrp']">Groups / Contacts </a></li>
+          <!-- <li> <a [routerLink]="['/grouplist']">Group List</a></li>
           <li> <a [routerLink]="['/addcontact']">Add New Contacts</a></li>
-          <li><a [routerLink]="['/blocknumber']">Block Number</a></li>
+          <li><a [routerLink]="['/blocknumber']">Block Number</a></li> -->
     </ul>
     </li>
 
     <li id="activeList2">
       <a class="sideNavLink"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="nav-label">SEND SMS</span><span class="fa arrow"></span></a>
       <ul class="nav nav-second-level collapse" id ="ActiveIn2">
-          <li> <a [routerLink]="['/sendsms']">Send SMS</a></li>
-          <li> <a [routerLink]="['/schedulesms']">Schedule SMS</a></li>
+          <li> <a [routerLink]="['/sendsms']">Compose SMS</a></li>
+          <!-- <li> <a [routerLink]="['/schedulesms']">Schedule SMS</a></li> -->
           <li><a [routerLink]="['/dynamicsms']">Dynamic SMS</a></li>
           <!-- <li> <a (click)="goDashboard();">WhatsApp SMS</a></li> -->
-          <li><a [routerLink]="['/groupsms']">Group SMS</a></li>
+          <!-- <li><a [routerLink]="['/groupsms']">Group SMS</a></li>
           <li> <a [routerLink]="['/partialgroup']">Partial SMS</a></li>
-          <li><a [routerLink]="['/savesms']">Save SMS</a></li>
+          <li><a [routerLink]="['/savesms']">Save SMS</a></li> -->
        </ul>
      </li>
 
@@ -60,11 +60,11 @@
       </li>
 
       <li id="activeList4">
-          <a class="sideNavLink" [routerLink]="['/accountblnc']"><i class="fa fa-balance-scale" aria-hidden="true"></i> <span class="nav-label">ACCOUNT BALANCE</span><span class="fa arrow"></span></a>
+          <a class="sideNavLink" [routerLink]="['/accountblnc']"><i class="fa fa-balance-scale" aria-hidden="true"></i> <span class="nav-label">ACCOUNT BALANCE</span></a>
       </li>
 
       <li id="activeList5">
-          <a class="sideNavLink" [routerLink]="['/senderid']"><i class="fa fa-table"></i> <span class="nav-label">SENDER IDs</span><span class="fa arrow"></span></a>
+          <a class="sideNavLink" [routerLink]="['/senderid']"><i class="fa fa-table"></i> <span class="nav-label">SENDER ID</span></a>
           
       </li>
 
