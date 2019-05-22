@@ -1,0 +1,26 @@
+.sideNavLink {
+    background-color: #2f4050;
+}
+.page-wrapper{
+    background-color: #2f4050;
+}
+
+.logo-dashborad {
+    color: #e6e6e6;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    margin-bottom: 0px;
+    margin-top:-20px;
+  }
+.img-circle {
+    margin-left: 35%;
+  }
+
+  #user-name-dashboard{
+    margin-left: 40%;
+}
+.btn-primary{
+    background-color: #1aab45;
+    border-color: #1aab45;
+      }

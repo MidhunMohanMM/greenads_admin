@@ -1,0 +1,172 @@
+
+<div>
+  <div id="wrapper">
+    <app-sidenav></app-sidenav>
+
+    <div id="page-wrapper" class="gray-bg">
+    <div class="row border-bottom">
+        <app-headernav></app-headernav>
+    </div>
+    <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>Group SMS</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a>Messages</a>
+                    </li>
+                    <li class="active">
+                        <strong>Group SMS</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+             
+            </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+  
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <!-- <h5>All form elements <small>With custom checbox and radion elements.</small></h5> -->
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <form method="get" class="form-horizontal">
+                           <div class="form-group"><label class="col-sm-2 control-label">Route Type</label>
+                                <div class="col-sm-10"><select class="form-control m-b" name="account">
+                                    <option>Promo-SenderId</option>
+                                    <option>Promotional</option>
+                                    <option selected>Transaction</option>                                 
+                                    </select>
+                                </div>
+                          </div>
+                          <div class="hr-line-dashed"></div>
+                          <div class="form-group"><label class="col-sm-2 control-label">Route Type</label>
+                                  <div class="col-sm-10"><select class="form-control m-b" name="account">
+                                     <option>GREENG</option>                                                                      
+                                     </select>
+                                  </div>
+                          </div> 
+                          <div class="hr-line-dashed"></div>
+                          <div class="form-group"><label class="col-sm-2 control-label">Send To<br/></label>
+                                  
+                              <div class="col-sm-10">
+                                      
+                                      <!-- <label class="radio-inline"> 
+                                              <div *ngFor = "let number of number">                                                        
+                                                  <input                                                        
+                                                  type="radio"                                                    
+                                                  name="recievers"
+                                                  value="{{number}}"
+                                                  (change)="radioChangeHandler($event)">                                                
+                                                  <i>{{number}}</i>
+                                              </div>
+                                          </label>
+                                    
+                                              <p><span>You Selected:</span><b>{{selectedNumber}}</b></p> -->
+                                          
+                                          <label class="radio-inline">
+                                          <input type="radio" name="gawcontact" value="1" id="contactList1" [(ngModel)]="gawcontact" (click)="addNum1();">Number/Numbers</label>                               
+                                          <label class="radio-inline">
+                                          <input type="radio" name="gawcontact" value="2" id="contactList2" [(ngModel)]="gawcontact" (click)="addNum2();">Group/Groups</label> 
+                                          <label class="radio-inline">
+                                          <input type="radio" name="gawcontact" value="3" id="fileupload" [(ngModel)]="gawcontact" (click)="addNum3();">File Upload</label>                                       
+                                          <div id="addNumber1" class="desc">
+                                              <textarea  rows="4"  [(ngModel)]="sent_numbers" name="sent_numbers" id="quantity"   (input)="number_chech($event.target.value)" form="usrform" style="min-width: 50%" required>                                             
+                                              </textarea><span id="errmsg"></span>                                          
+                                              <div id="valide_number_error"></div>
+                                                      <div>
+                                                          <button type="button"  id="not_sent_number" class="btn btn-primary" (click)="invalide_numbers()">
+                                                          Invalid Numbers <span class="badge badge-light">{{invalide_number?.length}}</span>
+                                                          </button>
+                                                      </div>
+                                          </div> 
+                                          <div id="addNumber2" class="desc">
+                                          <ng-multiselect-dropdown
+                                          [name]="selectedItems"
+                                          [placeholder]="'Select Groups'"
+                                          [data]="dropdownList"
+                                          [(ngModel)]="selectedItems"
+                                          [settings]="dropdownSettings"
+                                          (onSelect)="onItemSelect($event)"
+                                          (onSelectAll)="onSelectAll($event)">
+                                          </ng-multiselect-dropdown>
+                                          </div> 
+                                          
+                                          
+                                                                       
+                                   </div>                             
+                          </div>
+                            <div id="smfileup">
+                            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                <div class="form-control" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                                <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                            </div>  
+                          </div>
+                          <div class="hr-line-dashed"></div>
+                          <div class="form-group"><label class="col-sm-2 control-label">Message</label>
+                              <div id="addNumber1" class="desc col-sm-10">
+                                  <textarea type="number"  rows="4" maxlength="2400" id="message" [(ngModel)]="sms_content" name="sms_content" form="usrform" (input)="charcount($event.target.value)" style="min-width: 50%">
+                                      </textarea>
+                                      <p>
+                                          <span id="remaining">characters remaining:160 </span>
+                                          <span id="messages">messages:1 </span>
+                                          <span id="chartotal">total character:0 </span>
+                                          <span id="maxlimit">&emsp;Max Limit :2400</span>
+                                      </p>   
+                                      <div id="valide_content_error"></div>
+                                  </div> 
+                          </div>
+                            <div class="hr-line-dashed"></div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label"><br/></label>
+                                <div class="col-sm-10">
+                                    <label class="radio-inline">
+                                    <input type="radio" name="gawcontact" value="1" (click)="hideDayTime();" >Send Immediately</label>                               
+                                    <label class="radio-inline">
+                                    <input type="radio" name="gawcontact" value="2" (click)="showDayTime();" >Schedule SMS</label>                                
+                                </div> 
+                            </div>
+                            <div class="form-group"><label class="col-sm-2 control-label"><br/></label>
+                                    <div class="row" id="showDayTime">
+                                    <div class="col-sm-2">
+                                    <div id ="datepick-width">
+                                    <my-date-picker name="mydate" id="datepick" [options]="myDatePickerOptions"
+                                    [(ngModel)]="model" placeholder="Select Date" required></my-date-picker>
+                                    </div>
+                                    </div> 
+                                    <div class="col-sm-3">
+                                    <input name="timepick" type ="timepick" atp-time-picker placeholder="Select Time" required>
+                                    </div>
+                                    </div>
+                                    </div>   
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                 
+                                    <button class="btn btn-primary" type="submit" (click)=sent_sms();>Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    </div>
+    </div>
+</div>

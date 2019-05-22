@@ -1,0 +1,95 @@
+<div>
+    <div id="wrapper">
+      <app-sidenav></app-sidenav>
+      <div id="page-wrapper" class="gray-bg">
+          <div class="row border-bottom">
+            <app-headernav></app-headernav>
+          </div>
+          <div class="row wrapper border-bottom white-bg page-heading">
+              <div class="col-lg-10">
+                  <h2>Transactional Templates</h2>
+                  <ol class="breadcrumb">
+                      <li>
+                          <a href="index.html">Home</a>
+                      </li>
+                      <!-- <li>
+                          <a>Reports</a>
+                      </li> -->
+                      <li class="active">
+                          <strong>Trans Templates</strong>
+                      </li>
+                  </ol>
+              </div>
+              <div class="col-lg-2">
+         
+              </div>
+          </div>
+          <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <form method="get" class="form-horizontal">
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                  <div class="row">                                  
+                                      <div class="col-lg-6">
+                                          <p>
+                                            <button class="btn btn-primary" (click)="addBlockButn();" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                              Add New Template
+                                            </button>&nbsp;&nbsp;&nbsp;                                         
+                                         </p>  
+                                      </div> 
+                                  </div>
+                                  <div class="collapse" id="collapseExample">
+                                      <div class="card card-body">
+                                          <div class="form-group"><label class="col-sm-2 control-label">Template Name</label>
+                                           
+                                                <div class="col-md-2">
+                                                  <input type="text" class="form-control" [(ngModel)]="block_number" name="block_number">
+                                                </div>
+                                           
+                                          </div>
+                                          <div class="form-group"><label class="col-sm-2 control-label">Template Message</label>
+                                            <div id="addNumber1" class="desc col-sm-10">
+                                                <textarea type="number"  rows="6" maxlength="2400" id="message" [(ngModel)]="sms_content" name="sms_content" form="usrform" (input)="charcount($event.target.value)" style="min-width: 50%">
+                                                    </textarea>
+                                                    <p>
+                                                        <span id="remaining">characters remaining:160 </span>
+                                                        <span id="messages">messages:1 </span>
+                                                        <span id="chartotal">total character:0 </span>
+                                                        <span id="maxlimit">&emsp;Max Limit :2400</span>
+                                                    </p>   
+                                                    <div id="valide_content_error"></div>
+                                            </div> 
+                                          </div>
+                                          <div class="form-group"><label class="col-sm-2 control-label"></label>
+                                            <div id="addNumber1" class="desc col-sm-10">
+                                                <button type="button" class="btn btn-primary mb-2" (click)="addNum();">Add</button>
+                                              </div>
+                                            </div>
+                                      </div>
+                                  </div>       
+                              </div>                             
+                            </div>
+                            </form>
+                            <div class="hr-line-dashed"></div> 
+                            
+                            <div id="divider"></div> 
+                                       
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

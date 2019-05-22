@@ -1,0 +1,117 @@
+#login-align-center{
+    
+    position:inherit;
+   margin-top:35%;
+}
+::-webkit-input-placeholder {
+    font-style: italic;
+    font-size: 12px;
+ }
+ :-moz-placeholder {
+    font-style: italic; 
+    font-size: 12px; 
+ }
+ ::-moz-placeholder {
+    font-style: italic; 
+    font-size: 12px; 
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+    font-size: 12px;
+ }
+ #emailError{
+   margin-top: .25rem;
+   font-size: 1.3rem;
+   color: #dc3545;
+ }
+ #passwordError{
+   margin-top: .25rem;
+   font-size: 1.3rem;
+   color: #dc3545;
+ }
+ .login-align-right{
+    /* margin-left:40%; */
+    margin-top:5rem;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+ }
+ .gray-bg{
+   background-color:white;
+ }
+ body {
+   background-color: rgba(0,0,0,0.6);
+  
+  }
+  .image{
+  
+   background-size:cover;
+   width:auto;
+   background-image:url('/assets/img/sign1.jpg');
+   background-position:50% 50%;
+
+ }
+
+ #login-content{
+   background-color:white;
+  height: 100vh; 
+  overflow:show;
+ }
+button {
+ 
+   height: 42px;
+   border: 0;
+   font-weight: 500;
+   border-radius: 5px;
+   
+   }
+   #btnlogin{
+      width: 30%;
+      background-color: #4482FF;
+    border-color: #4482FF;
+    color:white;
+    position:relative;
+    float: right;
+   }
+ #btnFb{
+   background-color: #3b5998;
+   color:white;
+   margin-top:1rem;
+   width: 100%;
+ } 
+ #signUp{
+   background-color:white;
+   color:black;
+   margin-top:5rem;
+   width: 100%;
+ }
+ #googlePl{
+   background-color: #3b5998;
+   color:white;
+   background-color: #dd4b39;
+   margin-top:1rem;
+   width: 100%;
+ }   
+ /* #loginForm{
+    margin-top:20rem;
+ } */
+ .greenLogo{
+    margin-left:40%;
+    margin-top:5rem;
+ }
+ #creatAc{
+    margin-top:8rem;
+ }
+ #logContent{
+    padding-right: 0px;
+    padding-left: 0px;
+ }
+ input[type="email"] {
+  height: 43px;
+}
+input[type="password"] {
+   height: 43px;
+ }
+ .btn-primary{
+   background-color: #1aab45;
+   border-color: #1aab45;
+     }

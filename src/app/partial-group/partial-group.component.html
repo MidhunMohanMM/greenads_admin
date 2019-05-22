@@ -1,0 +1,114 @@
+<div>
+    <div id="wrapper">
+      <app-sidenav></app-sidenav>
+      <div id="page-wrapper" class="gray-bg">
+          <div class="row border-bottom">
+            <app-headernav></app-headernav>
+          </div>
+          <div class="row wrapper border-bottom white-bg page-heading">
+              <div class="col-lg-10">
+                  <h2>Group Particulars</h2>
+                  <ol class="breadcrumb">
+                      <li>
+                          <a href="index.html">Home</a>
+                      </li>
+                      <li>
+                          <a>Messages</a>
+                      </li>
+                      <li class="active">
+                          <strong>Partial Group</strong>
+                      </li>
+                  </ol>
+              </div>
+              <div class="col-lg-2">
+         
+              </div>
+          </div>
+          <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Group Particulars </h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <form method="get" class="form-horizontal">
+                                <div class="form-group"><label class="col-sm-2 control-label">Route Type</label>
+                                  <div class="col-sm-10"><select class="form-control m-b" name="account">
+                                      <option>Promo-SenderId</option>
+                                      <option>Promotional</option>
+                                      <option selected>Transaction</option>                                 
+                                      </select>
+                                  </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group"><label class="col-sm-2 control-label">Group</label>
+                                    <div class="col-sm-10"><select class="form-control m-b" name="account">
+                                       <option></option>                                                                      
+                                       </select>
+                                    </div>
+                            </div>
+                            <div class="hr-line-dashed"></div> 
+                                <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-10">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-3">                                       
+                                        <div class="col-sm-10"><span id ="smsReport-text">Trans Templates</span><select class="form-control m-b" name="account">
+                                                <option></option>                        
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-3"> 
+                                        <div class="col-sm-10"><span id ="smsReport-text">Saved SMS</span><select class="form-control m-b" name="account">
+                                                <option></option>                                                                    
+                                            </select>
+                                        </div>
+                                    </div>  
+                                    </div>
+                                </div>  
+                                </div>
+                              <div class="hr-line-dashed"></div>
+                              <div class="form-group"><label class="col-sm-2 control-label">Message</label>
+                                    <div id="addNumber1" class="desc col-sm-10">
+                                        <textarea type="number"  rows="5" maxlength="2400" id="message" [(ngModel)]="sms_content" name="sms_content" form="usrform" (input)="charcount($event.target.value)" style="min-width: 50%">
+                                            </textarea>
+                                            <p>
+                                                <span id="remaining">characters remaining:160 </span>
+                                                <span id="messages">messages:1 </span>
+                                                <span id="chartotal">total character:0 </span>
+                                                <span id="maxlimit">&emsp;Max Limit :2400</span>
+                                            </p>   
+                                            <div id="valide_content_error"></div>
+                                        </div> 
+                              </div>
+                              <div class="hr-line-dashed"></div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Sender Name</label>
+                                        <div class="col-sm-10"><select class="form-control m-b" name="account">
+                                            <option>GREENG</option>                                                                      
+                                            </select>
+                                        </div>
+                                    </div> 
+                                    
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                    <button class="btn btn-primary" type="submit" (click)=sent_sms();>Send</button>
+                                    </div>
+                                </div>       
+                            </form>                    
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

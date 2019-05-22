@@ -1,0 +1,25 @@
+#smsReport-text{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+}
+#getReport{
+    margin-top: 2.5rem;
+    margin-left:2.5rem;
+}
+#divider {
+    height: 3px;
+    width:100%;
+    display:block; /* for use on default inline elements like span */
+    margin: 9px 0;
+    overflow: hidden;
+    background-color:#d0d0d0;
+  }
+  #downLoadXI{
+    margin-top: 2.7rem;
+    margin-left: 2.5rem;
+  }
+  .btn-primary{
+background-color: #1aab45;
+border-color: #1aab45;
+  }

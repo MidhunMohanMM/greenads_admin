@@ -1,0 +1,131 @@
+<div>
+  <div id="wrapper">
+    <app-sidenav></app-sidenav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+          <app-headernav></app-headernav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>SMS Reports</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a>Reports</a>
+                    </li>
+                    <li class="active">
+                        <strong>SMS Reports</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+       
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="ibox float-e-margins">
+                      <div class="ibox-title">
+                          <div class="ibox-tools">
+                              <a class="collapse-link">
+                                  <i class="fa fa-chevron-up"></i>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="ibox-content">
+                          <form method="get" class="form-horizontal">
+                          <div class="form-group">
+                            <div class="col-sm-12">
+                                <div class="row">                                  
+                                    <div class="col-md-3"><span id ="smsReport-text">Report type</span>
+                                        <select class="form-control m-b" name="account">
+                                            <option>HTTP API</option>
+                                            <option>COMPOSE</option>
+                                            <option>EXCEL</option>
+                                            <option selected>FILE UPLOAD</option>   
+                                            <option>All Type</option>                                   
+                                            </select>                                       
+                                    </div>
+                                    <div class="col-md-3"><span id ="smsReport-text">From</span><input type="text"  class="form-control"></div>
+                                    <div class="col-md-3"><span id ="smsReport-text">To</span><input type="text" class="form-control"></div>
+                                    <!-- <div class="col-md-3"><button class="btn btn-primary" type="submit" id ="getReport">Get Report</button></div> -->
+                                </div>
+                            </div>                             
+                          </div>
+                          </form>
+                          <div class="hr-line-dashed"></div> 
+                          <form method="get" class="form-horizontal">                  
+                              <div class="form-group">
+                                <div class="col-md-6"><span id ="smsReport-text">Search Number</span>
+                                    <div class="input-group"><input type="text" class="form-control"> <span class="input-group-btn" placeholder="Enter Number"> <button type="button" class="btn btn-primary">Search
+                                    </button> </span></div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <button class="btn btn-primary " type="submit" id ="downLoadXI">Download XI</button>
+                                </div>   
+                              </div>  
+                          </form>   
+                          <div id="divider"></div>         
+                      </div>                      
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Custom responsive table </h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                        <thead>
+                                                <tr>
+                                                    <th>#</th>                                          
+                                                    <th>Number</th>
+                                                    <th>Message</th>
+                                                    <th>SMS Length</th>
+                                                    <th>No.Of Credits</th>
+                                                    <th>Status</th>
+                                                    <th>Error Code</th>
+                                                    <th>Error Desc</th>
+                                                    <th>Sender ID</th>
+                                                    <th>Route Time</th>
+                                                    <th>Sening Time</th>
+                                                    <th>Delivery Time</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+                         

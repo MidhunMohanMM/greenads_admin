@@ -1,0 +1,83 @@
+.sideNavLink {
+    background-color: #2f4050;
+}
+.page-wrapper{
+    background-color: #2f4050;
+}
+#newgrpBtn{
+    float: right;
+}
+#viewAllCont{
+    touch-action: manipulation; 
+    cursor: pointer;
+    font-weight: bold;
+}
+#contact_name_error{
+    margin-top: .25rem;
+    font-size: 1.3rem;
+    color: #dc3545;
+  }
+
+  #contact_number_error{
+    margin-top: .25rem;
+    font-size: 1.3rem;
+    color: #dc3545;
+  }
+  .logo-dashborad {
+    color: #e6e6e6;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    margin-bottom: 0px;
+    margin-top:-20px;
+  }
+.img-circle {
+    margin-left: 35%;
+  }
+
+  #user-name-dashboard{
+      margin-left:20%;
+  }
+  .btn-primary{
+    background-color: #1aab45;
+    border-color: #1aab45;
+      }
+
+
+
+      .input-container {
+    
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    .input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid #bf7d7d73;
+        max-height: 2rem;
+      }
+      input[type=text]:focus{
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid #ed5564;     /* oranges! yey */
+      }
+     .input-icon{
+        font-size: 2rem;
+        color:#ed5564;
+     } 
+     .input-icon-left{
+         margin-left:15px;
+         font-size: 2rem;
+         color:#ed5564;
+     }
+     .form-control{
+         width:90%;
+         margin-left:17px;
+    
+     }
+     #modalheading{
+       text-align: center;
+     }

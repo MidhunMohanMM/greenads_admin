@@ -1,0 +1,206 @@
+<div>
+    <div id="wrapper">
+      <app-sidenav></app-sidenav>
+      <div id="page-wrapper" class="gray-bg">
+          <div class="row border-bottom">
+            <app-headernav></app-headernav>
+          </div>
+          <div class="row wrapper border-bottom white-bg page-heading">
+              <div class="col-lg-10">
+                  <h2>Add New Contact</h2>
+                  <ol class="breadcrumb">
+                      <li>
+                          <a href="index.html">Home</a>
+                      </li>
+                      <li>
+                          <a>Phone Book</a>
+                      </li>
+                      <li class="active">
+                          <strong>Add New Contact</strong>
+                      </li>
+                  </ol>
+              </div>
+              <div class="col-lg-2">
+         
+              </div>
+          </div>
+          <div class="wrapper wrapper-content animated fadeInRight">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="ibox float-e-margins">
+                          <div class="ibox-content  p-md">
+                          <!-- <h2>Phone Book</h2> -->
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <p>
+                                <button class="btn btn-primary" (click)="addConButn();" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                  Add Contact
+                                </button>&nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-primary" type="button" (click)="conList();" >
+                                  Contact List
+                                </button>  
+                                
+                            </p>  
+                            </div>                    
+                          </div>
+          
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card card-body">
+                                        <form  class="form-horizontal" id ="addCon">           
+                                            <div class="form-group mx-sm-3 mb-2" >
+                                              <div class="col-lg-4">
+                                              <input type="text" class="form-control" [(ngModel)]="add_name" name="add_name" placeholder="Enter Name">
+                                            </div><div class="col-lg-4">
+                                              <input type="text" class="form-control" [(ngModel)]="add_number" name="add_number" placeholder="Enter Number">
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <select class="form-control m-b" name="account" placeholder="Select Group">
+                                                    <option id="option_select" value="" selected disabled>Select Group</option>
+                                                    <option>Family</option>
+                                                    <option>Friends</option>
+                                                    <option>College</option>                                 
+                                                    </select>
+                                            </div>
+                                            
+                                            <div class="col-lg-4">
+                                            <button type="button" class="btn btn-primary mb-2" (click)="addCont();">Add</button>
+                                            </div>  
+                                            </div>
+                                         </form>
+                                           
+                                         <span id="bnerr"></span>  
+                                       
+                                    </div>
+                                </div>                              
+                            </div>
+                          </div>    
+                      </div>
+                  </div>
+              </div>
+                              
+      <div class="col-lg-12">
+              <div class="ibox float-e-margins" id = "nCTable">
+                  <div class="ibox-title">
+                      <h5>New Contact</h5>
+                      <div class="ibox-tools">
+                          <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                          </a>
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                              <i class="fa fa-wrench"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-user">
+                              <li><a href="#">Config option 1</a>
+                              </li>
+                              <li><a href="#">Config option 2</a>
+                              </li>
+                          </ul>
+                          <a class="close-link">
+                              <i class="fa fa-times"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="ibox-content">
+  
+                      <table class="table table-hover" >
+                          <thead>
+                          <tr>
+                              <th>#</th>
+                              
+                              <th>Name</th>
+                              <th>Number</th>
+                              <th>Group</th>
+                              <th>Delete</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>1</td>                          
+                              <td>Samantha</td>
+                              <td class="text-warning">1234567890</td>
+                              <td class="text-success">Family</td>
+                              <td><a href="#"><i class="fa fa-times text-navy"></i></a></td>
+                          </tr>
+                         
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+      </div>   
+      <div class="col-lg-12">
+              <div class="ibox float-e-margins" id = "conTable">
+                  <div class="ibox-title">
+                      <h5>Your Contatcs</h5>
+                      <div class="ibox-tools">
+                          <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                          </a>
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                              <i class="fa fa-wrench"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-user">
+                              <li><a href="#">Config option 1</a>
+                              </li>
+                              <li><a href="#">Config option 2</a>
+                              </li>
+                          </ul>
+                          <a class="close-link">
+                              <i class="fa fa-times"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="ibox-content">
+  
+                      <table class="table table-hover" >
+                          <thead>
+                          <tr>
+                              <th>#</th>
+                              
+                              <th>Name</th>
+                              <th>Number</th>
+                              <th>Group</th>
+                              <th>Delete</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>1</td>                          
+                              <td>Samantha</td>
+                              <td class="text-warning">1234567890</td>
+                              <td class="text-success">Family</td>
+                              <td><a href="#"><i class="fa fa-times text-navy"></i></a></td>
+                          </tr>
+                          <tr>
+                                  <td>2</td>                          
+                                  <td>Sidharth</td>
+                                  <td class="text-warning">1234567890</td>
+                                  <td class="text-success">Friends</td>
+                                  <td><a href="#"><i class="fa fa-times text-navy"></i></a></td>
+                          </tr>
+                          <tr>
+                                  <td>3</td>                          
+                                  <td>Falil</td>
+                                  <td class="text-warning">1234567890</td>
+                                  <td class="text-success">College</td>
+                                  <td><a href="#"><i class="fa fa-times text-navy"></i></a></td>
+                          </tr>
+                          <tr>
+                                  <td>4</td>                          
+                                  <td>Karun</td>
+                                  <td class="text-warning">1234567890</td>
+                                  <td class="text-success">Family</td>
+                                  <td><a href="#"><i class="fa fa-times text-navy"></i></a></td>
+                          </tr>
+                         
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+      </div>   
+      </div>
+      </div>   
+    </div>
+  </div>
+  

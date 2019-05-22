@@ -1,0 +1,47 @@
+<body class="image">
+        <div>
+                <div id="wrapper">
+        <div class="col-md-12" id ="logContent">
+        
+        <div class="col-md-8"> </div>
+        
+        <div class="col-md-4" id ="logContent" >
+        <div id="login-content">
+        <div class="col-md-12" >
+                <h3 style="color:white;">Welcome to IN+</h3>
+                <img alt="image" class="greenLogo" src="assets/img/white-logo-small.png" />
+            <div class="login-align-right" >
+            <form class="m-t" role="form"  >
+              <div class="form-group">
+                  <input type="email" id="loginForm" [(ngModel)]="email" name="email" class="form-control" placeholder="User Name Eg.Reseller" required="" value="sidharthpsoly@gmail.com">
+                  <div id="emailError"></div>
+              </div>
+              
+              <div class="form-group">
+                  <input type="password"   [(ngModel)]="password" name="password" class="form-control" placeholder="Eg.res123" required="" value="admin">
+                  <div id="passwordError"></div>
+              </div>
+              <button type="submit" id= "btnlogin" (click)="doLogin();" >Sign In</button>
+
+              <a href="#"><small>Forgot password?</small></a>
+              <p class="text-muted text-center" id ="creatAc"><small>Do not have an account?</small></p>
+              
+              <Button id="btnFb">
+                    Sign In With FaceBook
+                  </Button>
+                  <Button id="googlePl">
+                        Sign In With Google Plus
+                      </Button>
+                      <button type="submit" id ="signUp" class="btn btn-primary block full-width m-b" (click)=" user_signup();">Create a GreenAds account</button>
+
+             </form>
+            </div>
+            </div>
+        </div> 
+        </div>
+       
+        </div>
+    </div>
+       
+</div>
+</body>

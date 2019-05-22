@@ -1,0 +1,16 @@
+#smsReport-text{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+    
+}
+#errmsg{
+    color: red;
+    }
+    #maxlimit{
+        color:red;
+    }
+    .btn-primary{
+        background-color: #1aab45;
+        border-color: #1aab45;
+          }

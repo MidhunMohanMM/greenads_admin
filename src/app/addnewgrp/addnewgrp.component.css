@@ -1,0 +1,56 @@
+
+.sideNavLink {
+    background-color: #2f4050;
+}
+.page-wrapper{
+    background-color: #2f4050;
+}
+#alert{
+    width: 30% !important;
+    padding: 5px;
+    margin-top: 5px;
+}
+.todo-completed {
+    text-decoration: blink !important;
+}
+#viewAllCont{
+    touch-action: manipulation; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+  #grperror{
+    margin-top: .25rem;
+    font-size: 1.3rem;
+    color: #dc3545;
+  }
+  #contact_name_error{
+    margin-top: .25rem;
+    font-size: 1.3rem;
+    color: #dc3545;
+  }
+
+  #contact_number_error{
+    margin-top: .25rem;
+    font-size: 1.3rem;
+    color: #dc3545;
+  }
+  .logo-dashborad {
+    color: #e6e6e6;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    margin-bottom: 0px;
+    margin-top:-20px;
+  }
+.img-circle {
+    margin-left: 35%;
+  }
+
+  #user-name-dashboard{
+    margin-left: 40%;
+  }
+  .btn-primary{
+    background-color: #1aab45;
+    border-color: #1aab45;
+      }

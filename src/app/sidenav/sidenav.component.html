@@ -1,0 +1,91 @@
+<body class="pace-done" >
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+  <ul class="nav metismenu" id="side-menu">
+  <li class="nav-header">
+    <div class="dropdown profile-element">
+    <div class="logo-dashborad">
+            <img alt="image" class="greenLogo" src="assets/img/white-logo.png" />
+    </div><span><img alt="image" class="img-circle" src="assets/img/profile_small.jpg" width="48px" height="48px"/></span>
+         <a data-toggle="dropdown" class="dropdown-toggle" href=" ">
+         <span class="clear"> <span class="block m-t-xs">
+      <!-- <strong class="font-bold">User</strong> --></span>
+        <span class="text-muted text-xs block" id ="user-name-dashboard">{{username}} <b class="caret"></b></span> </span> </a>
+        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+            <li><a  [routerLink]="['/dashboard', username]" >Profile</a></li>
+           
+            <li class="divider"></li>
+            <li><a  [routerLink]="['']" >Logout</a></li>
+         </ul>
+     </div>
+            <div class="logo-element">
+                    <img alt="image" class="greenLogo-small" src="assets/img/white-logo-small.png" />
+             </div>
+   </li>
+   <li class="active">
+      <a class="sideNavLink"  [routerLink]="['/dashboard', username]"><i class="fa fa-th-large"></i> <span class="nav-label">DASHBOARD</span></a>
+   </li>
+
+   <li id="activeList1">
+       <a class="sideNavLink"><i class="fa fa-address-book-o" aria-hidden="true"></i> <span class="nav-label">PHONE BOOK</span><span class="fa arrow"></span></a>
+       <ul class="nav nav-second-level collapse" id ="ActiveIn1">
+          <li> <a  [routerLink]="['/addnewgrp']">Add New Group</a></li>
+          <li> <a [routerLink]="['/grouplist']">Group List</a></li>
+          <li> <a [routerLink]="['/addcontact']">Add New Contacts</a></li>
+          <li><a [routerLink]="['/blocknumber']">Block Number</a></li>
+    </ul>
+    </li>
+
+    <li id="activeList2">
+      <a class="sideNavLink"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="nav-label">SEND SMS</span><span class="fa arrow"></span></a>
+      <ul class="nav nav-second-level collapse" id ="ActiveIn2">
+          <li> <a [routerLink]="['/sendsms']">Send SMS</a></li>
+          <li> <a [routerLink]="['/schedulesms']">Schedule SMS</a></li>
+          <li><a [routerLink]="['/dynamicsms']">Dynamic SMS</a></li>
+          <!-- <li> <a (click)="goDashboard();">WhatsApp SMS</a></li> -->
+          <li><a [routerLink]="['/groupsms']">Group SMS</a></li>
+          <li> <a [routerLink]="['/partialgroup']">Partial SMS</a></li>
+          <li><a [routerLink]="['/savesms']">Save SMS</a></li>
+       </ul>
+     </li>
+
+     <li id="activeList3" >
+         <a class="sideNavLink"><i class="fa fa-file-text-o"></i> <span class="nav-label">REPORTS</span><span class="fa arrow"></span></a>
+         <ul class="nav nav-second-level collapse" id ="ActiveIn3">
+
+         <li><a [routerLink]="['/smsreport']">SMS Report</a></li>
+         <!-- <li><a (click)="goDashboard();">WhatsApp Report</a></li> -->
+
+         </ul>
+      </li>
+
+      <li id="activeList4">
+          <a class="sideNavLink" [routerLink]="['/accountblnc']"><i class="fa fa-balance-scale" aria-hidden="true"></i> <span class="nav-label">ACCOUNT BALANCE</span><span class="fa arrow"></span></a>
+      </li>
+
+      <li id="activeList5">
+          <a class="sideNavLink" [routerLink]="['/senderid']"><i class="fa fa-table"></i> <span class="nav-label">SENDER IDs</span><span class="fa arrow"></span></a>
+          
+      </li>
+
+      <li id="activeList6">
+           <a class="sideNavLink" [routerLink]="['/transtemp']"><i class="fa fa-file-o" aria-hidden="true"></i> <span class="nav-label">TRANS TEMPLATES</span></a>
+      </li>
+
+      <li id="activeList7">
+           <a class="sideNavLink"><i class="fa fa-download" aria-hidden="true"></i> <span class="nav-label">DOWNLOADS</span><span class="fa arrow"></span></a>
+           <ul class="nav nav-second-level collapse" id ="ActiveIn7">
+           <li><a [routerLink]="['/pluginapis']">Excel Plugin & API</a></li>
+           <li><a [routerLink]="['/downloadcenter']">Download Center</a></li>
+  
+           </ul>
+       </li >
+
+       <li id="activeList8">
+            <a class="sideNavLink" [routerLink]="['/changepassword']" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span class="nav-label">CHANGE PASSWORD</span></a>
+       </li>
+
+  </ul>                                                                                                                                                                   
+  </div>
+</nav>
+</body>
