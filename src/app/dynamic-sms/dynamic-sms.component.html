@@ -29,15 +29,10 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <!-- <h5>Account Balance </h5> -->
-                            <div class="ibox-tools">
-                                <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                            </div>
+                            <h5>Dynamic Message</h5>
                         </div>
                         <div class="ibox-content">
-                            <form method="get" class="form-horizontal">                          
+                            <!-- <form method="get" class="form-horizontal">                          
                                 <div class="form-group"><label class="col-sm-2 control-label">Choose File </label>
                                   <div class="col-sm-10">
                                     <div id="smfileup">
@@ -50,7 +45,7 @@
                                   </div>
                                 </div>
                                 <div class="form-group"><label class="col-sm-2 control-label">Route Type</label>
-                                  <div class="col-sm-10"><select class="form-control m-b" name="account">
+                                  <div class="col-sm-4"><select class="form-control m-b" name="account">
                                       <option>Promo-SenderId</option>
                                       <option>Promotional</option>
                                       <option selected>Transaction</option>                                 
@@ -59,7 +54,7 @@
                                 </div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group"><label class="col-sm-2 control-label">Mobile Column</label>
-                                    <div class="col-sm-10"><select class="form-control m-b" name="account">
+                                    <div class="col-sm-4"><select class="form-control m-b" name="account">
                                        <option>A</option> <option>B</option> <option>C</option> <option>D</option> <option>E</option>
                                        <option>F</option>  <option>G</option> <option>H</option> <option>I</option> <option>J</option>
                                        <option>K</option> <option>L</option> <option>M</option> <option>N</option> <option>O</option>
@@ -72,29 +67,27 @@
                                 <div class="hr-line-dashed"></div> 
                                 <div class="form-group">
                                 <div class="col-sm-12">
-                                    <div class="col-sm-10">
-                                    <div class="col-sm-2"></div>
                                     <div class="col-sm-3">                                       
-                                        <div class="col-sm-10"><span id ="smsReport-text">Trans Templates</span><select class="form-control m-b" name="account">
+                                        <div class="col-sm-10"><span id ="smsReport-text">Trans Templates</span>
+                                            <select class="form-control m-b" name="account">
                                                 <option></option>                        
                                           </select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-2"></div>
                                     <div class="col-sm-3"> 
-                                        <div class="col-sm-10"><span id ="smsReport-text">Saved SMS</span><select class="form-control m-b" name="account">
+                                        <div class="col-sm-10"><span id ="smsReport-text">Saved SMS</span>
+                                            <select class="form-control m-b" name="account">
                                                 <option></option>                                                                    
                                             </select>
                                         </div>
                                     </div>  
-                                    </div>
                                 </div>  
-                                </div>  
+                              
                                 <div class="hr-line-dashed"></div>
-                                <div class="form-group">
+                              
                                 <div class="col-sm-12">
                                 
-                                    <div class="col-sm-2"></div>
+                         
                                     <div class="col-sm-2">
                                         <div class="form-group" id="tempName"><span id ="smsReport-text">Template Name</span>                    
                                             
@@ -102,7 +95,7 @@
                                                         
                                         </div>
                                     </div>
-                                    <div class="col-sm-2"></div>
+                        
                                     <div class="col-sm-6">
                                         <div class="form-group"><span id ="smsReport-text">&emsp;Template Message</span>
                                             <div id="addNumber1" class="desc col-sm-10">
@@ -153,7 +146,151 @@
                                     <button class="btn btn-primary" type="submit" (click)=sent_sms();>Send</button>
                                     </div>
                                 </div>
-                            </form>                    
+                            </form>                     -->
+                            <div class="wrapper wrapper-content animated fadeInRight">
+                                <div class="row">
+                                    
+                                     <div class="col-lg-10">
+                                        <form >
+                                            <div class="form-row ">
+                                              <div class="form-group col-md-6">
+                                                <div class="form-group">
+                                                  <label>Route Type <span id="text-red">*</span></label>
+                                                  <select class="form-control" [(ngModel)]='users' name="users" id="inputEmail4" required (change)="userSelected($event)" required>
+                                                      <option value="" selected disabled > -- Select Route Type -- </option>
+                                                      <option value="1">PROMOTIONAL</option>
+                                                      <option value="2">PROMO - SID</option>
+                                                      <option value="3">TRANSACTIONAL</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="form-group col-md-6">
+                                              <div class="form-group">
+                                                <label>Sender ID <span id="text-red">*</span></label>
+                                                    <select  class="form-control" [(ngModel)]='routype' name="routype" id="inputEmail4" (change)="navSelected($event)" required>
+                                                        <option value="" selected disabled >-select-</option>
+                                                        <option *ngFor="let routestype of routestypes" [value]="routestype.routestypesid">{{routestype.name}}</option>
+              
+                                                    </select>
+                                                </div>
+                                                </div>
+                                             
+                                            </div>
+                                           
+                                   
+                                            <div class="form-row">
+                                          
+                                                <div class="form-group col-md-6">
+                                                <div class="form-group">
+                                                      <label>Saved SMS</label>
+                                                      <div id="smfileup">
+                                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                                            <div class="form-control" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                                                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                        </div>  
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                     
+                                                <div class="form-group col-md-6">
+                                                    <div class="form-group">
+                                                    <label>INSTRUCTIONS:</label>
+                                                    <div>
+                                                    1.File should be .xlsx format
+                                                        <br/>
+                                                    2.Select sheet name in which data exists
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="form-row ">
+                                                    <div class="form-group col-md-6">
+                                                      <div class="form-group">
+                                                        <label>Transactional Templates</label>
+                                                        <select class="form-control" [(ngModel)]='templates' name="templates" id="inputEmail4" required (change)="templateSelected($event)" required>
+                                                            <option value="" selected disabled > -- Select Transactional templates -- </option>
+                                                            <option *ngFor="let templates of TableDatas" [value]="templates.userstemplatesid">{{templates.name}}</option>
+                                                        
+                                                        </select>
+                                                    </div>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                    <div class="form-group">
+                                                      <label>Saved SMS</label>
+                                                          <select  class="form-control" [(ngModel)]='routype' name="routype" id="inputEmail4" (change)="navSelected($event)" required>
+                                                              <option value="" selected disabled >-select-</option>
+                                                              <option *ngFor="let routestype of routestypes" [value]="routestype.routestypesid">{{routestype.name}}</option>
+                    
+                                                          </select>
+                                                      </div>
+                                                      </div>
+                                                   
+                                                  </div>
+                                                  <div class="form-row" >
+                                                        <div class="col-md-12">
+                                                            <div class="form-group" id="numbers">
+                                                                <label>Message </label><b style="color: red">*</b>
+                                                                <div class="row" >
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group" id="numbers">
+                                                                            <textarea id="Message" maxlength="2400" rows="6" style="width:100%;" placeholder="Enter Message Here...." class="textarea_2 grid303" required="" ></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row" >
+                                                            <div class="col-md-12">
+                                                                <div class="form-group" id="numbers">
+                                                                    <div *ngFor="let variables of templateVariables;let i = index;">
+                                                                            <label > {{variables}}</label>
+                                                                            <input type="text" class="form-control" id="var{{i+1}}" name="variables[i]" (keyup)="vartyping($event)">
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+              
+                                            <div class="form-row">
+                                              <div class="form-group col-md-6">
+                                                  <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" (change)="sendnow();" checked>
+                                                      <label class="form-check-label" for="exampleRadios1">
+                                                          Send Now
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="form-group col-md-6">
+                                                  <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"  (change)="schedule()" >
+                                                      <label class="form-check-label" for="exampleRadios2">
+                                                          Schedule
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                            </div>  
+                                            <div class="form-row">
+                                              <div class="form-group col-md-12">
+                                                
+                                                  <form #myForm="ngForm" novalidate id="mydate" *ngIf="radioStatus == true">
+                                                      <my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="model" required></my-date-picker>
+                                                  </form>
+                                              </div> 
+                                            </div>       
+                                            <div class="form-row">
+                                                
+                                            <div class="form-group col-md-6">      
+                                            <button type="submit" class="btn btn-primary" (click)=doSend();>Send Now</button>
+                                            </div>
+                                        </div>
+                                          </form>
+                                    </div>
+                
+                                   
+                                </div>
+                            </div>
                         </div>                      
                     </div>
                 </div>

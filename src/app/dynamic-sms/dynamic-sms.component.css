@@ -1,8 +1,11 @@
-#smfileup{
+/* #smfileup{
     width:42%;
     /* margin-left: 17%; */
-    /* margin-top:2.25rem; */
-}
+    /* margin-top:2.25rem; 
+} */
+/* .border-bottom{
+    border-bottom:solid 1px;
+} */
 #smsReport-text{
     font-weight: bold;
     margin-bottom: 1rem;
@@ -18,20 +21,23 @@
 #errmsg{
     color: red;
     }
-    #maxlimit{
-        color:red;
-    }
-    input[type="timepick"] {
-        height: 35px;
-        border: none; /* <-- This thing here */
-        border:solid 1px #ccc;
-        border-radius: 4px;
-        text-align:center;
-    }
-    #datepick {
-        text-align:center;
-    }
-    .btn-primary{
-        background-color: #1aab45;
-        border-color: #1aab45;
-          }
+#text-red{
+    color: red;
+}
+#maxlimit{
+    color:red;
+}
+input[type="timepick"] {
+    height: 35px;
+    border: none; /* <-- This thing here */
+    border:solid 1px #ccc;
+    border-radius: 4px;
+    text-align:center;
+}
+#datepick {
+    text-align:center;
+}
+.btn-primary{
+    background-color: #1aab45;
+    border-color: #1aab45;
+}

@@ -57,6 +57,7 @@ export class TransTempComponent implements OnInit {
         const data = {
 
             "usersid" : this.userid ,
+            "name" : this.template_name ,
             "content" : this.sms_content,
             "variables" : template_variables,
             "status" : "1"
